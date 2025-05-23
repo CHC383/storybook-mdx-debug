@@ -1,0 +1,44 @@
+{
+  "name": "storybook-test",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "test": "vitest run",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.3.2",
+    "next": "^15.3.2",
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@mdx-js/rollup": "^3.1.0",
+    "@storybook/addon-docs": "^9.0.0-rc.4",
+    "@storybook/addon-vitest": "9.0.0-rc.4",
+    "@storybook/nextjs-vite": "9.0.0-rc.4",
+    "@tailwindcss/postcss": "^4.1.7",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "^15.3.2",
+    "eslint-plugin-storybook": "9.0.0-rc.4",
+    "postcss": "^8",
+    "storybook": "^9.0.0-rc.4",
+    "styled-jsx": "^5.1.7",
+    "tailwindcss": "^4.1.7",
+    "typescript": "^5",
+    "vitest": "^3.1.3"
+  }
+}
