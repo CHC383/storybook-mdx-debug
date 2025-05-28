@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from "vitest/config";
 
 // shared config
 export default defineConfig({
@@ -8,7 +8,7 @@ export default defineConfig({
     restoreMocks: true,
     unstubEnvs: true,
   },
-  optimizeDeps: {
-    include: ["react/jsx-runtime"],
-  },
+  // optimizeDeps: {
+  //   include: ["react/jsx-runtime"],
+  // },
 });

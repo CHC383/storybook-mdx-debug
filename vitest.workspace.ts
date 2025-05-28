@@ -1,32 +1,35 @@
-import mdx from '@mdx-js/rollup';
-import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
-import { storybookNextJsPlugin } from '@storybook/nextjs-vite/vite-plugin';
-import { defineWorkspace } from 'vitest/config';
+import mdx from "@mdx-js/rollup";
+import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
+import { storybookNextJsPlugin } from "@storybook/nextjs-vite/vite-plugin";
+import { defineWorkspace } from "vitest/config";
 
 export default defineWorkspace([
   {
-    extends: 'vitest.config.ts',
+    extends: "vitest.config.ts",
     plugins: [
       // See options at: https://storybook.js.org/docs/writing-tests/vitest-plugin#storybooktest
-      storybookTest({ storybookScript: 'pnpm storybook --ci' }),
+      storybookTest({
+        storybookScript: "pnpm storybook --ci",
+        disableAddonDocs: false,
+      }),
       // More info at: https://github.com/storybookjs/vite-plugin-storybook-nextjs
       storybookNextJsPlugin(),
       mdx(),
     ],
     test: {
-      name: 'storybook',
+      name: "storybook",
       browser: {
         enabled: true,
         headless: true,
-        provider: 'playwright',
+        provider: "playwright",
         instances: [
           {
-            browser: 'chromium',
+            browser: "chromium",
           },
         ],
       },
-      setupFiles: ['.storybook/vitest.setup.ts'],
-      environment: 'jsdom',
+      setupFiles: [".storybook/vitest.setup.ts"],
+      environment: "jsdom",
     },
   },
 ]);
