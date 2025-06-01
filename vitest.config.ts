@@ -8,7 +8,7 @@ export default defineConfig({
     restoreMocks: true,
     unstubEnvs: true,
   },
-  // optimizeDeps: {
-  //   include: ["react/jsx-runtime"],
-  // },
+  optimizeDeps: {
+    include: ["react/jsx-runtime"],
+  },
 });
